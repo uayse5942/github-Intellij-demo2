@@ -11,7 +11,7 @@ public class BlockScopeDemo {
         } // innerY is destroyed (goes out of scope) here
         System.out.println("After block: outerX = " + outerX);
 // The line below would cause a compile-time error:
-// System.out.println("After block: innerY = " + innerY);
+        //System.out.println("After block: innerY = " + innerY);
 // innerY is out of scope and no longer accessible.
     }
 }

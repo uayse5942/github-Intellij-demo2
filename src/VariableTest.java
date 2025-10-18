@@ -5,7 +5,7 @@ public class VariableTest {
         public void printInstanceVar() {
 // Accessing the instance variable is valid inside a non-static method
             System.out.println("Instance variable inside method: " + instanceVar);
-// Local variable
+// Local variable - Method Level Scope
             int localVar = 5;
             System.out.println("Local variable inside method: " + localVar);
         }
@@ -14,7 +14,7 @@ public class VariableTest {
             VariableTest obj = new VariableTest();
             obj.printInstanceVar();
 // Uncommenting the line below would cause a compile-time error
-//System.out.println(obj.localVar);
+            //System.out.println(obj.localVar);
 // Local variables (like localVar) are not accessible outside their method
         }
 }

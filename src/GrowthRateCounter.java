@@ -6,6 +6,7 @@ public class GrowthRateCounter {
                 "n", "log n", "n", "n log n", "n^2", "n^3");
 
         for (int n : sizes) {
+
             long logN = countLogN(n);
             long nLinear = countN(n);
             long nLogN = countNLogN(n);
@@ -19,38 +20,40 @@ public class GrowthRateCounter {
 
     static long countLogN(int n) {
         long count = 0;
-        for (int i = n; i > 1; i /= 2) count++;
+        for (int i = n; i > 1; i /= 2) count++;  //logn
         return count;
     }
 
     static long countN(int n) {
         long count = 0;
-        for (int i = 0; i < n; i++) count++;
+        for (int i = 0; i < n; i++) count++;  //n
         return count;
     }
 
     static long countNLogN(int n) {
         long count = 0;
-        for (int i = 0; i < n; i++)
-            for (int j = n; j > 1; j /= 2)
+        for (int i = 0; i < n; i++)   //n
+            for (int j = n; j > 1; j /= 2) //logn
                 count++;
         return count;
     }
 
-    static long countN2(int n) {
+    static long countN2(int n) {  //n^2
         long count = 0;
-        for (int i = 0; i < n; i++)
-            for (int j = 0; j < n; j++)
+        for (int i = 0; i < n; i++)   //n
+            for (int j = 0; j < n; j++)    //n
                 count++;
         return count;
     }
 
-    static long countN3(int n) {
+    static long countN3(int n) {   //n^3
         long count = 0;
-        for (int i = 0; i < n; i++)
-            for (int j = 0; j < n; j++)
-                for (int k = 0; k < n; k++)
+        for (int i = 0; i < n; i++)  //n
+            for (int j = 0; j < n; j++)   //n
+                for (int k = 0; k < n; k++)   //n
                     count++;
         return count;
     }
 }
+
+
